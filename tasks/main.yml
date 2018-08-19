@@ -1,0 +1,9 @@
+---
+# tasks file for ansible-galaxy-gitlab
+
+- name: show env
+  debug:
+    msg: "This host is in {{ env }} environment!!!"
+
+# provision gitlab
+- include_tasks: gitlab.yml
