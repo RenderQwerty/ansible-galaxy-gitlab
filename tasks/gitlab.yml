@@ -9,3 +9,20 @@
     - data
     - config
     - logs
+
+- name: Spinup gitlab instance
+  docker_container:
+    name: web
+    image: gitlab/gitlab-ce:latest
+    restart_policy: always
+    hostname: gitlab.example.com
+    env:
+      GITLAB_OMNIBUS_CONFIG: external_url 'http://35.204.19.241'
+    published_ports:
+      - '80:80'
+      - '443:443'
+      - '2222:22'
+    volumes:
+      - '/srv/gitlab/config:/etc/gitlab'
+      - '/srv/gitlab/logs:/var/log/gitlab'
+      - '/srv/gitlab/data:/var/opt/gitlab'
