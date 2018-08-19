@@ -1,4 +1,3 @@
 ---
 # defaults file for ansible-galaxy-gitlab
 env: default
-gitlab_ip:
