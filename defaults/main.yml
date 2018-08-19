@@ -1,7 +1,3 @@
 ---
 # defaults file for ansible-galaxy-gitlab
 env: default
-path:
-  data: /srv/gitlab/data
-  config: /srv/gitlab/config
-  logs: /srv/gitlab/logs
