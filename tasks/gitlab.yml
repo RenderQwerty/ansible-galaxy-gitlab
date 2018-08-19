@@ -17,7 +17,7 @@
     restart_policy: always
     hostname: gitlab.example.com
     env:
-      GITLAB_OMNIBUS_CONFIG: external_url 'http://35.204.19.241'
+      GITLAB_OMNIBUS_CONFIG: external_url '{{ gitlab_ip }}'
     published_ports:
       - '80:80'
       - '443:443'
